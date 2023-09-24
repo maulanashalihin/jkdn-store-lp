@@ -1,0 +1,49 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-yellow-50">
+		<slot />
+	</body>
+</html>
+<style is:global> 
+	@font-face {
+		font-family: 'Sunflower';
+		src: url('/fonts/Sunflower.otf') format('opentype');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+		}
+
+		@font-face {
+		font-family: 'OuterSansLight';
+		src: url('/fonts/MADE+Outer+Sans+Light.otf') format('opentype'); 
+		}
+
+
+		
+
+
+		.sunflower {
+  font-family: Sunflower;
+}
+
+.OuterSansLight{
+	font-family: OuterSansLight;
+}
+
+</style>
